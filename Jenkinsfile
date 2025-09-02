@@ -1,7 +1,7 @@
 pipeline {
 	agent any
 	stages {
-		steps('python') {
+		stage('python') {
 			steps {
 				python back.py
 			}
