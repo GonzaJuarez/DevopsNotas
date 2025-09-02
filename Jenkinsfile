@@ -3,10 +3,8 @@ pipeline {
   stages {
     stage('python') {
       steps {
-        // verifica Python
-        bat 'python --version'
-        // ejecuta tu script
-        bat 'python back.py'
+        bat 'py -3 --version'
+        bat 'py -3 back.py'
       }
     }
   }
