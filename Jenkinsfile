@@ -1,13 +1,17 @@
 pipeline {
   agent any
   stages {
-    stage('python') {
-      steps {
+    stage('diag'){
+      steps{
         bat 'where python || echo no-python'
         bat 'where py || echo no-py'
         bat 'echo %PATH%'
-        bat 'py -3 --version'
-        bat 'py -3 back.py'
+      }
+    }
+    stage('python') {
+      steps {
+        bat '"C:\\Users\\Usuario\\AppData\\Local\\Programs\\Python\\Python312\\python.exe" --version'
+        bat '"C:\\Users\\Usuario\\AppData\\Local\\Programs\\Python\\Python312\\python.exe" back.py'
       }
     }
   }
