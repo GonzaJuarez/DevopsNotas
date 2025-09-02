@@ -3,7 +3,7 @@ pipeline {
 	stages {
 		stage('python') {
 			steps {
-				python3 back.py
+				bat python3 back.py
 			}
 		}
 	}
